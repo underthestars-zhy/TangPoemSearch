@@ -22,6 +22,5 @@ if __name__ == '__main__':
                         count += 1
                         break
 
-    pprint.pprint(all_poems)
-    for item in all_poems:
-        print(item['title'])
+    with open('./poems.json', 'w') as f:
+        json.dump(all_poems, f, ensure_ascii=False, indent=4)
